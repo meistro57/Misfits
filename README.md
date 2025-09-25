@@ -6,10 +6,10 @@
 
 *An AI-powered life simulation where quirky characters create their own stories*
 
-[![Open Source](https://img.shields.io/badge/Open%20Source-💚-brightgreen)](https://github.com/your-org/misfits)
-[![AI Powered](https://img.shields.io/badge/AI%20Powered-🤖-blue)](https://github.com/your-org/misfits)
-[![Community Driven](https://img.shields.io/badge/Community%20Driven-👥-purple)](https://github.com/your-org/misfits)
-[![Built with Love](https://img.shields.io/badge/Built%20with-❤️-red)](https://github.com/your-org/misfits)
+[![Open Source](https://img.shields.io/badge/Open%20Source-💚-brightgreen)](https://github.com/meistro57/Misfits)
+[![AI Powered](https://img.shields.io/badge/AI%20Powered-🤖-blue)](https://github.com/meistro57/Misfits)
+[![Community Driven](https://img.shields.io/badge/Community%20Driven-👥-purple)](https://github.com/meistro57/Misfits)
+[![Built with Love](https://img.shields.io/badge/Built%20with-❤️-red)](https://github.com/meistro57/Misfits)
 
 </div>
 
@@ -45,8 +45,8 @@ Instead of micromanaging characters, you:
 
 ```bash
 # Clone the chaos
-git clone https://github.com/your-org/misfits-game.git
-cd misfits-game
+git clone https://github.com/meistro57/Misfits.git
+cd Misfits
 
 # Set up your world
 pip install -r requirements.txt
@@ -265,7 +265,7 @@ If validation fails:
 
 #### 🚀 **Quick Start**
 ```bash
-git clone [repo]
+git clone https://github.com/meistro57/Misfits.git
 pip install -r requirements.txt
 python scripts/setup.py
 python scripts/validate_setup.py
@@ -277,9 +277,9 @@ python main.py
 <td width="33%">
 
 #### 📦 **Pre-built Release**
-Download from [Releases](releases)
+- Download from [Releases](https://github.com/meistro57/Misfits/releases) *(coming soon)*
 - Windows .exe
-- macOS .dmg  
+- macOS .dmg
 - Linux AppImage
 *Best for players*
 
@@ -287,10 +287,7 @@ Download from [Releases](releases)
 <td width="33%">
 
 #### 🐳 **Docker**
-```bash
-docker run -it misfits-game
-```
-*Best for servers*
+- **Docker image:** coming soon
 
 </td>
 </tr>
@@ -408,7 +405,7 @@ In a world of formulaic games and predictable AI, **Misfits!** represents someth
 
 ## 🚀 Ready to Meet Your Misfits?
 
-**[📥 Download Now](releases)** • **[📖 Documentation](docs/)** • **[💬 Join Discord](discord-link)** • **[🐛 Report Issues](issues)**
+**[📥 Download Now](https://github.com/meistro57/Misfits/releases) (coming soon)** • **[📖 Documentation](docs/README.md)** • **💬 Discord (coming soon)** • **[🐛 Report Issues](https://github.com/meistro57/Misfits/issues)**
 
 *Built with ❤️ and a healthy dose of chaos*
 
