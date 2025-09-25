@@ -1,0 +1,203 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "misfits-ai-life-sim"
+version = "0.1.0"
+description = "AI-Driven Life Simulation Game - No scripts. Just chaos."
+authors = [
+    {name = "Misfits Development Team", email = "dev@misfitsgame.com"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["ai", "simulation", "game", "life-sim", "emergent-narrative"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment :: Simulation",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.21.0",
+    "aiohttp>=3.8.0",
+    "PyYAML>=6.0",
+    "colorlog>=6.0.0",
+    "tqdm>=4.64.0",
+    "rich>=12.0.0",
+    "python-dotenv>=0.20.0",
+    "pydantic>=1.9.0",
+]
+
+[project.optional-dependencies]
+ai = [
+    "sentence-transformers>=2.2.0",
+    "transformers>=4.20.0",
+    "torch>=1.12.0",
+]
+vector-db = [
+    "faiss-cpu>=1.7.0",
+    "chromadb>=0.3.0",
+]
+audio = [
+    "pyttsx3>=2.90",
+    "speech_recognition>=3.9.0",
+    "pygame>=2.1.0",
+]
+web = [
+    "fastapi>=0.95.0",
+    "uvicorn>=0.18.0",
+    "websockets>=10.4",
+]
+analysis = [
+    "pandas>=1.4.0",
+    "matplotlib>=3.5.0",
+    "scikit-learn>=1.1.0",
+    "networkx>=2.8.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "memory-profiler>=0.60.0",
+    "psutil>=5.9.0",
+]
+all = [
+    "misfits-ai-life-sim[ai,vector-db,audio,web,analysis]"
+]
+
+[project.urls]
+Homepage = "https://github.com/misfits-game/misfits"
+Repository = "https://github.com/misfits-game/misfits"
+Documentation = "https://docs.misfitsgame.com"
+"Bug Tracker" = "https://github.com/misfits-game/misfits/issues"
+
+[project.scripts]
+misfits = "main:main"
+misfits-server = "scripts.server:main"
+misfits-config = "scripts.config_manager:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = [
+    "E203",  # whitespace before ':'
+    "E266",  # too many leading '#' for block comment
+    "E501",  # line too long (handled by black)
+    "W503",  # line break before binary operator
+]
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    "*.egg-info",
+    ".venv",
+    ".tox",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--verbose",
+]
+testpaths = [
+    "tests",
+]
+asyncio_mode = "auto"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "ai: marks tests that require AI models",
+]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "numpy.*",
+    "scipy.*",
+    "sentence_transformers.*",
+    "transformers.*",
+    "torch.*",
+    "faiss.*",
+    "chromadb.*",
+    "pygame.*",
+    "pyttsx3.*",
+    "speech_recognition.*",
+]
+ignore_missing_imports = true
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 100
+
+[tool.bandit]
+exclude_dirs = ["tests", "build", "dist"]
+skips = ["B101", "B601"]  # Skip assert_used and shell_injection_other

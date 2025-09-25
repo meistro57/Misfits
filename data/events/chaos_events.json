@@ -1,0 +1,363 @@
+{
+  "social_chaos": [
+    {
+      "event_id": "alien_abduction",
+      "name": "Alien Abduction",
+      "description": "A character gets abducted by aliens and returns with strange stories",
+      "category": "supernatural",
+      "chaos_level": "major",
+      "duration_minutes": 120,
+      "probability_weight": 0.1,
+      "prerequisites": ["nighttime", "character_outside"],
+      "character_requirements": {
+        "curiosity": 0.3
+      },
+      "world_requirements": {
+        "weather": ["clear", "cloudy"]
+      },
+      "immediate_effects": {
+        "remove_character_temporarily": true,
+        "add_mystery": 0.8,
+        "shock_other_characters": 0.6
+      },
+      "ongoing_effects": {
+        "character_gains_trait": "mysterious",
+        "strange_behavior": 0.4,
+        "alien_knowledge": true
+      },
+      "narrative_hooks": [
+        "Character has unexplained knowledge",
+        "Other characters don't believe the story",
+        "Strange marks or artifacts appear"
+      ]
+    },
+
+    {
+      "event_id": "surprise_pregnancy",
+      "name": "Surprise Pregnancy Announcement",
+      "description": "A character dramatically announces they're having a baby",
+      "category": "dramatic",
+      "chaos_level": "major",
+      "duration_minutes": 0,
+      "probability_weight": 0.3,
+      "prerequisites": ["adult_character_present"],
+      "character_requirements": {
+        "relationship_status": "in_relationship"
+      },
+      "world_requirements": {},
+      "immediate_effects": {
+        "major_announcement": true,
+        "relationship_drama": 0.9,
+        "emotional_chaos": 0.8
+      },
+      "ongoing_effects": {
+        "pregnancy_state": true,
+        "changed_dynamics": 0.7,
+        "planning_required": true
+      },
+      "narrative_hooks": [
+        "Partner's reaction is unexpected",
+        "Family planning conflicts arise",
+        "Characters take sides"
+      ]
+    },
+
+    {
+      "event_id": "neighborhood_protest",
+      "name": "Neighborhood Protest",
+      "description": "Protesters gather outside over a controversial local issue",
+      "category": "social",
+      "chaos_level": "moderate",
+      "duration_minutes": 180,
+      "probability_weight": 0.4,
+      "prerequisites": ["daytime"],
+      "character_requirements": {},
+      "world_requirements": {},
+      "immediate_effects": {
+        "noise_increase": 0.8,
+        "curiosity_spike": 0.6,
+        "stress_increase": 0.3
+      },
+      "ongoing_effects": {
+        "outdoor_access_limited": true,
+        "social_tension": 0.4,
+        "political_awareness": 0.2
+      },
+      "narrative_hooks": [
+        "Character joins the protest",
+        "Character opposes the cause",
+        "Character becomes mediator"
+      ]
+    }
+  ],
+
+  "environmental_chaos": [
+    {
+      "event_id": "terrible_wifi",
+      "name": "WiFi Apocalypse",
+      "description": "Internet connection becomes impossibly slow and unreliable",
+      "category": "technological",
+      "chaos_level": "mild",
+      "duration_minutes": 240,
+      "probability_weight": 0.6,
+      "prerequisites": ["internet_dependent_activity"],
+      "character_requirements": {},
+      "world_requirements": {},
+      "immediate_effects": {
+        "technology_frustration": 0.7,
+        "productivity_loss": 0.5,
+        "forced_offline_time": true
+      },
+      "ongoing_effects": {
+        "tech_activities_blocked": true,
+        "increased_social_interaction": 0.3,
+        "analog_activities_preferred": 0.4
+      },
+      "narrative_hooks": [
+        "Characters forced to interact more",
+        "Hidden talents discovered offline",
+        "Tech-dependency issues revealed"
+      ]
+    },
+
+    {
+      "event_id": "food_fight",
+      "name": "Epic Food Fight",
+      "description": "A minor kitchen disagreement escalates into a house-wide food war",
+      "category": "comedic",
+      "chaos_level": "moderate",
+      "duration_minutes": 30,
+      "probability_weight": 0.5,
+      "prerequisites": ["multiple_characters_present", "food_available"],
+      "character_requirements": {
+        "impulsive": 0.2
+      },
+      "world_requirements": {
+        "location": "kitchen"
+      },
+      "immediate_effects": {
+        "mess_everywhere": 0.9,
+        "laughter": 0.6,
+        "food_waste": 0.8,
+        "temporary_alliances": 0.4
+      },
+      "ongoing_effects": {
+        "cleanup_required": true,
+        "bonding_experience": 0.5,
+        "house_dirty": 0.7
+      },
+      "narrative_hooks": [
+        "Unlikely alliances form",
+        "Someone takes it too seriously",
+        "Hidden competitive nature revealed"
+      ]
+    },
+
+    {
+      "event_id": "power_outage",
+      "name": "Mysterious Power Outage",
+      "description": "All electricity goes out for mysterious reasons",
+      "category": "environmental",
+      "chaos_level": "moderate",
+      "duration_minutes": 180,
+      "probability_weight": 0.3,
+      "prerequisites": ["evening_or_night"],
+      "character_requirements": {},
+      "world_requirements": {},
+      "immediate_effects": {
+        "darkness": true,
+        "technology_disabled": true,
+        "atmosphere_change": 0.8
+      },
+      "ongoing_effects": {
+        "candlelight_activities": true,
+        "increased_intimacy": 0.4,
+        "ghost_story_time": 0.6
+      },
+      "narrative_hooks": [
+        "Romantic moments by candlelight",
+        "Ghost stories and spooky atmosphere",
+        "Characters reveal secrets in darkness"
+      ]
+    }
+  ],
+
+  "comedic_chaos": [
+    {
+      "event_id": "wardrobe_malfunction",
+      "name": "Wardrobe Malfunction",
+      "description": "A character's clothing fails at the most embarrassing moment possible",
+      "category": "comedic",
+      "chaos_level": "mild",
+      "duration_minutes": 15,
+      "probability_weight": 0.4,
+      "prerequisites": ["public_situation", "character_dressed"],
+      "character_requirements": {},
+      "world_requirements": {},
+      "immediate_effects": {
+        "embarrassment": 0.8,
+        "attention_drawn": 0.9,
+        "laughter_from_others": 0.6
+      },
+      "ongoing_effects": {
+        "confidence_dent": -0.3,
+        "memorable_moment": true,
+        "wardrobe_check_habit": 0.4
+      },
+      "narrative_hooks": [
+        "Character handles it gracefully",
+        "Someone comes to the rescue",
+        "Becomes running joke"
+      ]
+    },
+
+    {
+      "event_id": "mistaken_identity",
+      "name": "Case of Mistaken Identity",
+      "description": "A character is confused for someone famous or important",
+      "category": "comedic",
+      "chaos_level": "moderate",
+      "duration_minutes": 90,
+      "probability_weight": 0.3,
+      "prerequisites": ["public_outing"],
+      "character_requirements": {},
+      "world_requirements": {},
+      "immediate_effects": {
+        "special_treatment": true,
+        "confusion": 0.7,
+        "attention": 0.8
+      },
+      "ongoing_effects": {
+        "temporary_fame": true,
+        "moral_dilemma": 0.5,
+        "truth_revelation_tension": 0.6
+      },
+      "narrative_hooks": [
+        "Character plays along with deception",
+        "Truth comes out at worst moment",
+        "Character enjoys being someone else"
+      ]
+    }
+  ],
+
+  "personal_chaos": [
+    {
+      "event_id": "identity_crisis",
+      "name": "Identity Crisis",
+      "description": "A character suddenly questions everything about their life choices",
+      "category": "personal",
+      "chaos_level": "major",
+      "duration_minutes": 480,
+      "probability_weight": 0.2,
+      "prerequisites": ["adult_character"],
+      "character_requirements": {
+        "introspective": 0.3,
+        "life_stage": "adult"
+      },
+      "world_requirements": {},
+      "immediate_effects": {
+        "emotional_turmoil": 0.9,
+        "routine_disruption": 0.8,
+        "philosophical_questions": 0.7
+      },
+      "ongoing_effects": {
+        "personality_shift_possible": 0.6,
+        "relationship_reevaluation": 0.5,
+        "life_changes_considered": 0.8
+      },
+      "narrative_hooks": [
+        "Character changes career/lifestyle",
+        "Relationships become strained",
+        "Deep conversations with others"
+      ]
+    },
+
+    {
+      "event_id": "lucky_streak",
+      "name": "Incredible Lucky Streak",
+      "description": "Everything goes impossibly right for one character",
+      "category": "supernatural",
+      "chaos_level": "moderate",
+      "duration_minutes": 240,
+      "probability_weight": 0.3,
+      "prerequisites": ["character_attempting_activities"],
+      "character_requirements": {},
+      "world_requirements": {},
+      "immediate_effects": {
+        "success_rate_boost": 2.0,
+        "confidence_surge": 0.8,
+        "others_notice": 0.7
+      },
+      "ongoing_effects": {
+        "overconfidence_risk": 0.4,
+        "envy_from_others": 0.3,
+        "risk_taking_increase": 0.5
+      },
+      "narrative_hooks": [
+        "Character gets cocky",
+        "Others become jealous",
+        "Luck turns at crucial moment"
+      ]
+    }
+  ],
+
+  "technological_chaos": [
+    {
+      "event_id": "ai_assistant_rebellion",
+      "name": "AI Assistant Rebellion",
+      "description": "Smart home devices start acting with their own agenda",
+      "category": "technological",
+      "chaos_level": "moderate",
+      "duration_minutes": 120,
+      "probability_weight": 0.2,
+      "prerequisites": ["smart_devices_present"],
+      "character_requirements": {},
+      "world_requirements": {
+        "tech_level": "modern"
+      },
+      "immediate_effects": {
+        "device_malfunctions": 0.8,
+        "convenience_loss": 0.6,
+        "mystery_element": 0.7
+      },
+      "ongoing_effects": {
+        "tech_distrust": 0.4,
+        "manual_alternatives_needed": true,
+        "problem_solving_required": 0.6
+      },
+      "narrative_hooks": [
+        "Devices seem to have personality",
+        "Characters must work together",
+        "Tech-savvy character saves the day"
+      ]
+    },
+
+    {
+      "event_id": "viral_video",
+      "name": "Accidental Viral Video",
+      "description": "A character accidentally becomes internet famous",
+      "category": "technological",
+      "chaos_level": "moderate",
+      "duration_minutes": 0,
+      "probability_weight": 0.25,
+      "prerequisites": ["camera_present", "embarrassing_moment"],
+      "character_requirements": {},
+      "world_requirements": {},
+      "immediate_effects": {
+        "instant_fame": true,
+        "privacy_loss": 0.8,
+        "mixed_reactions": 0.7
+      },
+      "ongoing_effects": {
+        "internet_celebrity_status": true,
+        "stranger_recognition": 0.6,
+        "social_media_pressure": 0.5
+      },
+      "narrative_hooks": [
+        "Fame goes to character's head",
+        "Character struggles with attention",
+        "Others try to exploit the fame"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+# Core dependencies for Misfits! AI Life Simulation Game
+
+# AI and Machine Learning
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Async HTTP client for LLM communication
+aiohttp>=3.8.0
+
+# Database support
+sqlite3  # Built-in to Python
+
+# Configuration file support
+PyYAML>=6.0
+
+# Optional: Advanced embedding providers
+sentence-transformers>=2.2.0  # For better semantic embeddings
+transformers>=4.20.0          # For HuggingFace embeddings
+torch>=1.12.0                 # PyTorch backend for transformers
+
+# Optional: Enhanced vector storage
+faiss-cpu>=1.7.0              # For FAISS vector search
+chromadb>=0.3.0               # For Chroma vector database
+
+# Development and testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+black>=22.0.0                 # Code formatting
+flake8>=4.0.0                 # Linting
+
+# Logging and monitoring
+colorlog>=6.0.0               # Colored console logs
+
+# Data processing
+pandas>=1.4.0                 # For data analysis and export
+matplotlib>=3.5.0             # For visualization and charts
+
+# Text processing
+nltk>=3.7                     # Natural language processing
+spacy>=3.4.0                  # Advanced NLP (optional)
+
+# Audio support (future feature)
+pyttsx3>=2.90                 # Text-to-speech
+speech_recognition>=3.9.0     # Speech recognition
+
+# Web interface (future feature)
+fastapi>=0.95.0               # Web API framework
+uvicorn>=0.18.0               # ASGI server
+websockets>=10.4              # Real-time communication
+
+# Game development utilities
+Pillow>=9.0.0                 # Image processing
+pygame>=2.1.0                 # Audio and input handling (optional)
+
+# Performance optimization
+numba>=0.56.0                 # JIT compilation for numerical code
+cython>=0.29.0                # C extensions for performance
+
+# Memory profiling and debugging
+memory-profiler>=0.60.0       # Memory usage monitoring
+psutil>=5.9.0                 # System and process monitoring
+
+# Serialization
+msgpack>=1.0.0                # Efficient serialization
+pickle5>=0.0.12               # Enhanced pickle support
+
+# Cryptography (for secure features)
+cryptography>=37.0.0          # Encryption and security
+
+# Date and time utilities
+python-dateutil>=2.8.0       # Enhanced date/time handling
+
+# Progress bars and CLI utilities
+tqdm>=4.64.0                  # Progress bars
+click>=8.1.0                  # Command line interface utilities
+rich>=12.0.0                  # Rich text and beautiful formatting
+
+# Configuration and environment
+python-dotenv>=0.20.0         # Environment variable management
+pydantic>=1.9.0               # Data validation
+
+# Networking and protocols
+requests>=2.28.0              # HTTP requests
+websocket-client>=1.3.0       # WebSocket client
+
+# Scientific computing (for advanced AI features)
+scikit-learn>=1.1.0           # Machine learning algorithms
+networkx>=2.8.0               # Graph analysis for relationships

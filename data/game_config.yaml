@@ -1,0 +1,139 @@
+# Misfits! Game Configuration
+# This file contains all the settings for the AI Life Simulation Game
+
+# Large Language Model (LLM) Provider Configuration
+llm:
+  # Primary LLM provider (Ollama local installation)
+  primary:
+    provider: "ollama"
+    host: "localhost"
+    port: 11434
+    model: "llama2:7b-chat"
+    temperature: 0.7
+    max_tokens: 1000
+    timeout: 30
+    api_key: null
+
+  # Fallback provider (LM Studio)
+  fallback:
+    provider: "lm_studio"
+    host: "localhost"
+    port: 1234
+    model: "llama-2-7b-chat"
+    temperature: 0.7
+    max_tokens: 1000
+    timeout: 30
+    api_key: null
+
+  # Mock provider for development/testing
+  mock:
+    provider: "mock"
+    host: "localhost"
+    port: 0
+    model: "mock"
+    temperature: 0.7
+    max_tokens: 1000
+    timeout: 5
+    api_key: null
+
+# Database Configuration
+database:
+  type: "sqlite"
+  path: "misfits.db"
+  # For PostgreSQL/MySQL (not currently implemented)
+  # host: "localhost"
+  # port: 5432
+  # username: "misfits"
+  # password: "password"
+  # database: "misfits_game"
+
+# Vector Database for Semantic Memory Search
+vector_db:
+  embedding_provider: "mock"           # mock, sentence_transformers, huggingface
+  embedding_model: "all-MiniLM-L6-v2" # Model name for embedding provider
+  storage_type: "sqlite"               # memory, sqlite, faiss, chroma
+  storage_path: "vectors.db"           # Path for persistent storage
+  dimension: 384                       # Embedding dimension (384 for MiniLM)
+
+# Simulation Configuration
+simulation:
+  default_mode: "comedy_chaos"         # comedy_chaos, psychological_deep, learning_growth, sandbox
+  tick_interval: 5.0                   # Seconds between world updates
+  max_characters: 10                   # Maximum number of characters
+  auto_save_interval: 300              # Auto-save every 5 minutes
+  enable_chaos_button: true            # Allow chaos button usage
+  enable_interventions: true           # Allow player interventions
+
+# User Interface Configuration
+ui:
+  theme: "default"                     # default, dark, light, colorful
+  show_debug_info: false               # Show debug information in UI
+  auto_follow_drama: true              # Automatically focus on dramatic events
+  max_timeline_events: 100             # Maximum events to keep in timeline
+  update_frequency: 2.0                # UI update frequency in seconds
+
+# Global Game Settings
+debug_mode: false                      # Enable debug logging and features
+log_level: "INFO"                      # DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+# Advanced AI Settings
+ai_settings:
+  personality_evolution_rate: 0.1      # How quickly personalities can change
+  memory_decay_rate: 0.01              # How quickly memories fade
+  relationship_volatility: 0.3         # How quickly relationships change
+  emotional_persistence: 0.8           # How long emotions last
+  creativity_boost: 1.2                # Multiplier for creative responses
+
+# Performance Settings
+performance:
+  max_concurrent_ai_requests: 4        # Parallel AI processing limit
+  memory_cleanup_interval: 600         # Clean up old data every 10 minutes
+  max_memory_entries_per_character: 1000 # Memory limit per character
+  vector_search_limit: 50              # Maximum vectors to return in search
+
+# Feature Flags
+features:
+  enable_speech_synthesis: false       # Text-to-speech for character dialogue
+  enable_speech_recognition: false     # Voice input for player commands
+  enable_web_interface: false          # Web-based UI (future feature)
+  enable_mod_support: true             # Allow custom modifications
+  enable_analytics: false              # Usage analytics (privacy-respecting)
+
+# Experimental Features (may be unstable)
+experimental:
+  neural_mood_prediction: false        # Use ML for mood prediction
+  dynamic_personality_generation: false # Generate new personalities on-the-fly
+  cross_character_learning: false      # Characters learn from each other
+  emergent_language_evolution: false   # Language/slang evolution over time
+  quantum_decision_making: false       # Quantum-inspired randomness
+
+# Content Settings
+content:
+  mature_themes: false                 # Allow mature themes in content
+  violence_level: "cartoon"            # none, cartoon, realistic
+  romance_level: "pg"                  # none, pg, teen, mature
+  language_filter: "mild"              # strict, mild, none
+  cultural_sensitivity: "high"         # low, medium, high
+
+# Accessibility Settings
+accessibility:
+  screen_reader_support: true          # Support for screen readers
+  high_contrast_mode: false            # High contrast color scheme
+  large_text_mode: false               # Larger font sizes
+  reduced_motion: false                # Reduce animations and effects
+  keyboard_navigation: true            # Full keyboard navigation support
+
+# Localization
+localization:
+  default_language: "en"               # Default language
+  fallback_language: "en"              # Fallback if translation missing
+  date_format: "YYYY-MM-DD"            # Date format preference
+  time_format: "24h"                   # 12h or 24h time format
+  currency_symbol: "$"                 # Currency symbol for any economic features
+
+# Privacy Settings
+privacy:
+  telemetry_enabled: false             # Send usage statistics
+  crash_reporting: true                # Send crash reports (anonymous)
+  user_data_collection: false          # Collect user behavior data
+  analytics_opt_in: false              # Opt into analytics

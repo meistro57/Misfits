@@ -1,0 +1,289 @@
+{
+  "romantic_nihilist": {
+    "description": "A character who believes love is meaningless yet desperately seeks it",
+    "base_traits": ["romantic", "nihilist", "philosophical", "sensitive"],
+    "hidden_desires": ["connection", "meaning", "validation"],
+    "behavioral_weights": {
+      "social_seeking": 0.7,
+      "philosophical": 0.8,
+      "impulsive": 0.6,
+      "emotional_expression": 0.8,
+      "intellectual_pursuits": 0.7,
+      "creative_expression": 0.6,
+      "routine_following": 0.3
+    },
+    "dialogue_style": "poetic_pessimistic",
+    "conflicts": [
+      {
+        "trait1": "romantic",
+        "trait2": "nihilist",
+        "description": "Wants to believe in love while thinking it's all pointless"
+      }
+    ],
+    "narrative_potential": 0.9
+  },
+
+  "anxious_overachiever": {
+    "description": "Perfectionist who succeeds despite constant worry",
+    "base_traits": ["perfectionist", "anxious", "intelligent", "competitive"],
+    "hidden_desires": ["acceptance", "rest", "imperfection"],
+    "behavioral_weights": {
+      "intellectual_pursuits": 0.9,
+      "routine_following": 0.8,
+      "social_seeking": 0.4,
+      "risk_taking": 0.2,
+      "emotional_expression": 0.6,
+      "physical_activity": 0.3,
+      "leadership": 0.7
+    },
+    "dialogue_style": "precise_worried",
+    "conflicts": [
+      {
+        "trait1": "perfectionist",
+        "trait2": "anxious",
+        "description": "High standards create constant stress and self-doubt"
+      }
+    ],
+    "narrative_potential": 0.8
+  },
+
+  "charismatic_loner": {
+    "description": "Magnetically draws people in but needs solitude to recharge",
+    "base_traits": ["charismatic", "introverted", "mysterious", "independent"],
+    "hidden_desires": ["genuine_connection", "understanding", "being_known"],
+    "behavioral_weights": {
+      "social_seeking": 0.6,
+      "independence": 0.9,
+      "leadership": 0.7,
+      "emotional_expression": 0.4,
+      "intellectual_pursuits": 0.6,
+      "creative_expression": 0.5,
+      "routine_following": 0.3
+    },
+    "dialogue_style": "enigmatic_compelling",
+    "conflicts": [
+      {
+        "trait1": "charismatic",
+        "trait2": "introverted",
+        "description": "Attracts attention but craves privacy and solitude"
+      }
+    ],
+    "narrative_potential": 0.9
+  },
+
+  "creative_critic": {
+    "description": "Artistic soul who sees flaws in everything, including their own work",
+    "base_traits": ["creative", "critical", "passionate", "perfectionist"],
+    "hidden_desires": ["approval", "simplicity", "satisfaction"],
+    "behavioral_weights": {
+      "creative_expression": 0.9,
+      "intellectual_pursuits": 0.8,
+      "emotional_expression": 0.7,
+      "social_seeking": 0.5,
+      "risk_taking": 0.6,
+      "routine_following": 0.3,
+      "independence": 0.7
+    },
+    "dialogue_style": "artistic_analytical",
+    "conflicts": [
+      {
+        "trait1": "creative",
+        "trait2": "critical",
+        "description": "Creates beautiful things but can't stop finding flaws in them"
+      }
+    ],
+    "narrative_potential": 0.7
+  },
+
+  "optimistic_realist": {
+    "description": "Sees the world clearly but chooses hope anyway",
+    "base_traits": ["optimistic", "practical", "empathetic", "wise"],
+    "hidden_desires": ["naivety", "blind_faith", "carelessness"],
+    "behavioral_weights": {
+      "social_seeking": 0.7,
+      "emotional_expression": 0.6,
+      "intellectual_pursuits": 0.7,
+      "moral_behavior": 0.8,
+      "leadership": 0.6,
+      "independence": 0.5,
+      "routine_following": 0.6
+    },
+    "dialogue_style": "warm_thoughtful",
+    "conflicts": [
+      {
+        "trait1": "optimistic",
+        "trait2": "practical",
+        "description": "Wants to believe the best while knowing the harsh realities"
+      }
+    ],
+    "narrative_potential": 0.6
+  },
+
+  "rebellious_conformist": {
+    "description": "Wants to break rules but desperately needs approval",
+    "base_traits": ["rebellious", "conformist", "conflicted", "attention_seeking"],
+    "hidden_desires": ["acceptance", "authority", "stability"],
+    "behavioral_weights": {
+      "social_seeking": 0.8,
+      "risk_taking": 0.7,
+      "independence": 0.6,
+      "emotional_expression": 0.8,
+      "leadership": 0.5,
+      "routine_following": 0.4,
+      "moral_behavior": 0.4
+    },
+    "dialogue_style": "contradictory_passionate",
+    "conflicts": [
+      {
+        "trait1": "rebellious",
+        "trait2": "conformist",
+        "description": "Rebels against rules while desperately wanting to fit in"
+      }
+    ],
+    "narrative_potential": 0.8
+  },
+
+  "confident_insecure": {
+    "description": "Projects absolute confidence while drowning in self-doubt",
+    "base_traits": ["confident", "insecure", "performer", "vulnerable"],
+    "hidden_desires": ["vulnerability", "authenticity", "support"],
+    "behavioral_weights": {
+      "social_seeking": 0.8,
+      "leadership": 0.7,
+      "emotional_expression": 0.9,
+      "risk_taking": 0.7,
+      "independence": 0.6,
+      "intellectual_pursuits": 0.5,
+      "creative_expression": 0.6
+    },
+    "dialogue_style": "bold_fragile",
+    "conflicts": [
+      {
+        "trait1": "confident",
+        "trait2": "insecure",
+        "description": "Acts completely sure while feeling completely lost inside"
+      }
+    ],
+    "narrative_potential": 0.9
+  },
+
+  "logical_superstitious": {
+    "description": "Rational mind betrayed by irrational beliefs and rituals",
+    "base_traits": ["logical", "superstitious", "analytical", "intuitive"],
+    "hidden_desires": ["magic", "mystery", "faith"],
+    "behavioral_weights": {
+      "intellectual_pursuits": 0.8,
+      "routine_following": 0.7,
+      "risk_taking": 0.4,
+      "social_seeking": 0.5,
+      "emotional_expression": 0.5,
+      "independence": 0.7,
+      "moral_behavior": 0.6
+    },
+    "dialogue_style": "rational_mystical",
+    "conflicts": [
+      {
+        "trait1": "logical",
+        "trait2": "superstitious",
+        "description": "Believes in science and evidence but also in luck and omens"
+      }
+    ],
+    "narrative_potential": 0.7
+  },
+
+  "social_hermit": {
+    "description": "Craves human connection but finds social interaction exhausting",
+    "base_traits": ["social", "hermit", "empathetic", "overwhelmed"],
+    "hidden_desires": ["solitude", "peace", "simplicity"],
+    "behavioral_weights": {
+      "social_seeking": 0.8,
+      "independence": 0.7,
+      "emotional_expression": 0.6,
+      "intellectual_pursuits": 0.6,
+      "creative_expression": 0.5,
+      "routine_following": 0.5,
+      "physical_activity": 0.3
+    },
+    "dialogue_style": "warm_exhausted",
+    "conflicts": [
+      {
+        "trait1": "social",
+        "trait2": "hermit",
+        "description": "Loves people but needs to hide away to recover from them"
+      }
+    ],
+    "narrative_potential": 0.7
+  },
+
+  "wise_fool": {
+    "description": "Deep wisdom wrapped in apparent foolishness and playfulness",
+    "base_traits": ["wise", "foolish", "playful", "profound"],
+    "hidden_desires": ["seriousness", "respect", "understanding"],
+    "behavioral_weights": {
+      "social_seeking": 0.7,
+      "intellectual_pursuits": 0.8,
+      "creative_expression": 0.8,
+      "emotional_expression": 0.7,
+      "risk_taking": 0.6,
+      "independence": 0.6,
+      "moral_behavior": 0.7
+    },
+    "dialogue_style": "playful_profound",
+    "conflicts": [
+      {
+        "trait1": "wise",
+        "trait2": "foolish",
+        "description": "Understands deep truths but expresses them through apparent nonsense"
+      }
+    ],
+    "narrative_potential": 0.8
+  },
+
+  "generous_selfish": {
+    "description": "Gives everything to others while hoarding love for themselves",
+    "base_traits": ["generous", "selfish", "caring", "protective"],
+    "hidden_desires": ["receiving", "being_cared_for", "selfishness"],
+    "behavioral_weights": {
+      "social_seeking": 0.7,
+      "moral_behavior": 0.8,
+      "emotional_expression": 0.6,
+      "independence": 0.6,
+      "leadership": 0.5,
+      "intellectual_pursuits": 0.5,
+      "routine_following": 0.5
+    },
+    "dialogue_style": "giving_guarded",
+    "conflicts": [
+      {
+        "trait1": "generous",
+        "trait2": "selfish",
+        "description": "Freely gives material things but hoards emotional intimacy"
+      }
+    ],
+    "narrative_potential": 0.7
+  },
+
+  "brave_coward": {
+    "description": "Heroic in big moments, paralyzed by small everyday fears",
+    "base_traits": ["brave", "coward", "heroic", "anxious"],
+    "hidden_desires": ["safety", "normalcy", "predictability"],
+    "behavioral_weights": {
+      "risk_taking": 0.8,
+      "leadership": 0.7,
+      "social_seeking": 0.6,
+      "emotional_expression": 0.7,
+      "independence": 0.7,
+      "moral_behavior": 0.8,
+      "routine_following": 0.3
+    },
+    "dialogue_style": "heroic_worried",
+    "conflicts": [
+      {
+        "trait1": "brave",
+        "trait2": "coward",
+        "description": "Faces dragons but fears phone calls and social situations"
+      }
+    ],
+    "narrative_potential": 0.8
+  }
+}

@@ -1,0 +1,148 @@
+name: "Comedy & Chaos"
+description: "Maximum humor and absurdity - where Murphy's Law reigns supreme"
+
+parameters:
+  chaos_frequency: 0.8          # How often random events occur (0.0 - 1.0)
+  exaggeration_factor: 1.5      # How exaggerated personality traits become
+  prank_likelihood: 0.7         # Probability of prank actions
+  gossip_spread_rate: 2.0       # How quickly rumors spread
+  emotional_volatility: 1.3     # How quickly emotions change
+  learning_rate: 0.3            # How quickly characters adapt/grow
+  realism_level: 0.2            # How realistic vs absurd events are
+  consequence_weight: 0.4       # How much past actions affect future
+  chaos_button_enabled: true    # Whether chaos button is available
+  intervention_allowed: true    # Whether player interventions work
+
+# Events that can occur in this mode
+available_events:
+  - alien_abduction
+  - surprise_pregnancy
+  - neighborhood_protest
+  - terrible_wifi
+  - food_fight
+  - wardrobe_malfunction
+  - mistaken_identity
+  - prank_backfire
+  - musical_argument
+  - dance_off
+  - cooking_disaster
+  - celebrity_lookalike
+  - time_confusion
+  - language_mix_up
+  - costume_party_crash
+
+# How personality traits are modified in this mode
+personality_modifiers:
+  impulsive: 1.4         # More impulsive decisions
+  dramatic: 1.6          # Everything is more dramatic
+  mischievous: 1.5       # Increased tendency to cause trouble
+  sarcastic: 1.3         # More sarcastic responses
+  optimistic: 1.2        # Bounce back from problems faster
+  social: 1.3            # More social interactions
+  creative: 1.4          # More creative solutions (often silly)
+  competitive: 1.2       # Turn everything into competitions
+  attention_seeking: 1.5 # More likely to show off
+  spontaneous: 1.6       # Less planning, more random actions
+
+# Special rules that apply in comedy chaos mode
+special_rules:
+  - "Failures become comedic rather than tragic"
+  - "Characters are more resilient to negative events"
+  - "Pranks always have unexpected consequences"
+  - "Arguments turn into musical numbers 10% of the time"
+  - "Physical comedy is more likely (slipping, falling, etc.)"
+  - "Misunderstandings spiral into absurd situations"
+  - "Characters overreact to minor inconveniences"
+  - "Random costume changes happen during events"
+  - "Food-related chaos is twice as likely"
+  - "Technology malfunctions in amusing ways"
+
+# Dialogue style modifications for this mode
+dialogue_modifications:
+  - style: "over_the_top_dramatic"
+    traits: ["dramatic"]
+    description: "Turn everything into a soap opera moment"
+
+  - style: "extremely_sarcastic"
+    traits: ["sarcastic"]
+    description: "Sarcasm levels pushed to ridiculous extremes"
+
+  - style: "hyperactive_positive"
+    traits: ["cheerful", "optimistic"]
+    description: "Unreasonably upbeat about everything"
+
+  - style: "competitive_everything"
+    traits: ["competitive"]
+    description: "Turn any topic into a challenge or competition"
+
+  - style: "conspiracy_theorist"
+    traits: ["paranoid", "skeptical"]
+    description: "Find elaborate conspiracies in mundane events"
+
+# Events that are weighted higher in this mode
+priority_events:
+  - type: "prank_war"
+    weight_multiplier: 3.0
+    description: "Escalating series of pranks between characters"
+
+  - type: "talent_show_disaster"
+    weight_multiplier: 2.5
+    description: "Impromptu talent shows that go hilariously wrong"
+
+  - type: "cooking_competition"
+    weight_multiplier: 2.0
+    description: "Cooking contests with disastrous results"
+
+  - type: "costume_confusion"
+    weight_multiplier: 2.5
+    description: "Cases of mistaken identity due to costumes"
+
+  - type: "technology_rebellion"
+    weight_multiplier: 2.0
+    description: "Smart devices acting with apparent personalities"
+
+# Character interaction modifications
+interaction_modifiers:
+  - interaction: "greeting"
+    comedy_factor: 1.5
+    possible_outcomes:
+      - "Overly enthusiastic high-five that misses"
+      - "Complicated handshake that goes wrong"
+      - "Accidental rhyming conversation"
+
+  - interaction: "argument"
+    comedy_factor: 2.0
+    possible_outcomes:
+      - "Argument conducted entirely in questions"
+      - "Disagreement about something completely irrelevant"
+      - "Passionate debate over trivial preferences"
+
+  - interaction: "romantic"
+    comedy_factor: 1.8
+    possible_outcomes:
+      - "Romantic gesture interrupted by chaos"
+      - "Love confession in completely wrong moment"
+      - "Accidentally declaring love to wrong person"
+
+# Environmental chaos factors
+environmental_chaos:
+  weather_chaos: 0.3           # Chance weather changes dramatically
+  appliance_rebellion: 0.4     # Chance household items misbehave
+  timing_mishaps: 0.5          # Chance things happen at worst moment
+  coincidence_factor: 0.7      # Chance of absurd coincidences
+  murphy_law_strength: 0.9     # How strongly "what can go wrong, will"
+
+# Recovery and resilience factors
+resilience_factors:
+  bounce_back_speed: 2.0       # How quickly characters recover from setbacks
+  humor_healing: 1.5           # How much laughter helps with problems
+  social_support_boost: 1.3    # How much friends help in chaos
+  learning_from_chaos: 0.8     # How much wisdom comes from disasters
+
+# Special comedy mechanics
+comedy_mechanics:
+  physical_comedy_rate: 0.4    # Chance of slapstick moments
+  verbal_comedy_rate: 0.6      # Chance of witty dialogue
+  situational_comedy_rate: 0.7 # Chance of absurd situations
+  callback_humor_rate: 0.3     # Chance of referencing past events
+  running_gag_persistence: 0.5 # How likely running jokes continue

@@ -56,7 +56,7 @@ python scripts/setup.py
 python main.py
 ```
 
-**First time?** Check out our [🎯 Quick Start Guide](docs/quick-start.md) to create your first neighborhood of digital misfits!
+**First time?** Check out our [🎯 Getting Started Guide](docs/GETTING_STARTED.md) to create your first neighborhood of digital misfits!
 
 ---
 
@@ -190,10 +190,10 @@ Subtle influence > Direct control = More interesting stories
 ### **Core Technologies**
 | Component | Technology | Why We Chose It |
 |-----------|------------|-----------------|
-| **Game Engine** | Godot 4.x | Open-source, lightweight, perfect for indie projects |
-| **AI Brains** | Local LLMs (Ollama/LM Studio) | Privacy-focused, customizable, no API costs |
-| **Memory** | SQLite + FAISS | Fast vector similarity search for AI memories |
-| **Audio** | TTS + Lip-sync | Dynamic voices that match AI-generated personalities |
+| **Game Core** | Python 3.10+ | Async architecture, cross-platform compatibility |
+| **AI Brains** | Local LLMs (Ollama/LM Studio/Mock) | Privacy-focused, customizable, no API costs |
+| **Memory** | SQLite + Vector embeddings | Fast semantic search for AI memories |
+| **Interface** | Console + Rich formatting | Real-time character observation and interaction |
 | **Config** | JSON/YAML | Human-readable, easy to mod |
 
 ### **System Architecture**
@@ -299,12 +299,15 @@ git checkout -b amazing-new-feature
 
 ## 🗺️ Roadmap
 
-### **Version 1.0 - "The Great Awakening"** 🎯 *Current Focus*
+### **Version 1.0 - "The Great Awakening"** 🎯 *Current Status*
 - ✅ Core AI personality engine
-- ✅ Persistent memory system  
-- 🚧 Four simulation modes
-- 🚧 Basic modding framework
-- 🚧 Community tools
+- ✅ Persistent memory system with vector search
+- ✅ Four simulation modes (Comedy Chaos, Psychological Deep, Learning Growth, Sandbox)
+- ✅ Basic modding framework with JSON/YAML configs
+- ✅ Intervention systems (Chaos Button, Whisper, Direct Communication)
+- ✅ Multi-LLM support (Ollama, LM Studio, Mock provider)
+- 🚧 Web-based UI (currently console-based)
+- 🚧 Community tools and mod marketplace
 
 ### **Version 1.1 - "Community Chaos"** 🎪 *Next Up*
 - 📋 Enhanced mod creation tools
