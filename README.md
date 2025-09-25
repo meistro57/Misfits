@@ -52,6 +52,9 @@ cd misfits-game
 pip install -r requirements.txt
 python scripts/setup.py
 
+# Verify setup completed successfully (optional)
+python scripts/validate_setup.py
+
 # Let the chaos begin!
 python main.py
 ```
@@ -213,6 +216,39 @@ Environment ← ← ← Character Actions ← ← ← LLM Decisions ← ← ← 
 
 ---
 
+## 🧪 Setup Validation & Testing
+
+### **Ensuring Setup Success**
+Misfits! includes comprehensive testing to ensure your setup completes successfully:
+
+```bash
+# Quick validation (recommended after setup)
+python scripts/validate_setup.py
+
+# Comprehensive test suite (for developers)
+python scripts/test_setup.py
+
+# Individual unit tests (requires pytest)
+python -m pytest tests/test_setup.py -v
+```
+
+### **What Gets Tested**
+- ✅ **Database initialization** - SQLite databases with proper table structures
+- ✅ **Configuration files** - YAML/JSON configs for game modes and personalities
+- ✅ **Directory structure** - All required folders for assets, data, and logs
+- ✅ **Dependencies** - Python packages and LLM provider availability
+- ✅ **Memory systems** - Vector database and character memory persistence
+- ✅ **Integration** - Complete setup workflow validation
+
+### **Troubleshooting Setup Issues**
+If validation fails:
+1. **Missing dependencies**: Run `pip install -r requirements.txt`
+2. **Database errors**: Delete `*.db` files and re-run `python scripts/setup.py`
+3. **Permission issues**: Ensure write access to project directory
+4. **LLM providers**: Install Ollama or use mock provider for testing
+
+---
+
 ## 🚦 Getting Started
 
 ### **System Requirements**
@@ -231,6 +267,8 @@ Environment ← ← ← Character Actions ← ← ← LLM Decisions ← ← ← 
 ```bash
 git clone [repo]
 pip install -r requirements.txt
+python scripts/setup.py
+python scripts/validate_setup.py
 python main.py
 ```
 *Best for developers*
@@ -284,6 +322,9 @@ git checkout -b amazing-new-feature
 
 # Make your magic happen
 # (Don't forget tests!)
+
+# Run setup tests to ensure everything works
+python scripts/test_setup.py
 
 # Submit a pull request
 # Watch the chaos spread!

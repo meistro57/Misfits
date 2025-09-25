@@ -245,6 +245,12 @@ python main.py
 ### Development Commands
 
 ```bash
+# Setup validation and testing
+python scripts/setup.py                    # Initialize databases and configuration
+python scripts/validate_setup.py           # Quick validation of setup completion
+python scripts/test_setup.py               # Comprehensive setup test suite
+python -m pytest tests/test_setup.py -v    # Unit tests for setup components
+
 # Run specific tests
 python -m pytest tests/test_ai_engine.py
 
@@ -304,23 +310,38 @@ class InterventionSystem:
 
 ## Testing Strategy
 
+### Setup Validation Tests
+- Database initialization and schema validation
+- Configuration file creation and format verification
+- Directory structure setup completeness
+- Dependency availability checking
+- Memory system integration testing
+- LLM provider detection and connectivity
+
 ### Unit Tests
 - AI personality generation and consistency
 - Memory storage and retrieval accuracy
 - Event system functionality
 - Configuration validation
+- Setup component isolation testing
 
 ### Integration Tests
 - Multi-character interaction scenarios
 - Long-term memory persistence
 - Cross-system communication
 - Performance under load
+- Complete setup workflow validation
 
 ### AI Behavior Tests
 - Personality consistency over time
 - Appropriate responses to interventions
 - Memory-influenced decision making
 - Emergent narrative quality
+
+### Testing Files
+- `tests/test_setup.py` - Comprehensive setup validation test suite
+- `scripts/test_setup.py` - Test runner with project validation
+- `scripts/validate_setup.py` - Quick setup completion verification
 
 ## Performance Considerations
 
