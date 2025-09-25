@@ -6,10 +6,10 @@
 
 *An AI-powered life simulation where quirky characters create their own stories*
 
-[![Open Source](https://img.shields.io/badge/Open%20Source-💚-brightgreen)](https://github.com/your-org/misfits)
-[![AI Powered](https://img.shields.io/badge/AI%20Powered-🤖-blue)](https://github.com/your-org/misfits)
-[![Community Driven](https://img.shields.io/badge/Community%20Driven-👥-purple)](https://github.com/your-org/misfits)
-[![Built with Love](https://img.shields.io/badge/Built%20with-❤️-red)](https://github.com/your-org/misfits)
+[![Open Source](https://img.shields.io/badge/Open%20Source-💚-brightgreen)](https://github.com/meistro57/misfits)
+[![AI Powered](https://img.shields.io/badge/AI%20Powered-🤖-blue)](https://github.com/meistro57/misfits)
+[![Community Driven](https://img.shields.io/badge/Community%20Driven-👥-purple)](https://github.com/meistro57/misfits)
+[![Built with Love](https://img.shields.io/badge/Built%20with-❤️-red)](https://github.com/meistro57/misfits)
 
 </div>
 
@@ -45,8 +45,8 @@ Instead of micromanaging characters, you:
 
 ```bash
 # Clone the chaos
-git clone https://github.com/your-org/misfits-game.git
-cd misfits-game
+git clone https://github.com/meistro57/misfits.git
+cd misfits
 
 # Set up your world
 pip install -r requirements.txt
