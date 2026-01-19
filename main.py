@@ -14,6 +14,7 @@ import argparse
 import sys
 import logging
 from pathlib import Path
+from typing import Dict
 
 # Add src directory to Python path
 sys.path.insert(0, str(Path(__file__).parent / "src"))
@@ -67,7 +68,12 @@ class MisfitsGame:
     def _load_config(self, config_file: str):
         """Load and validate configuration."""
         try:
-            config = self.config_loader.load_game_config(config_file)
+            config_dict = self.config_loader.load_config_file(config_file)
+            env_config = self.config_loader.load_environment_config()
+            if env_config:
+                config_dict = self.config_loader.merge_configs(config_dict, env_config)
+
+            config = self.config_loader.parse_game_config(config_dict)
 
             if not self.config_loader.validate_config(config):
                 errors = self.config_loader.get_validation_errors()
@@ -81,7 +87,14 @@ class MisfitsGame:
 
         except FileNotFoundError:
             print(f"Configuration file {config_file} not found. Using default configuration.")
-            return self.config_loader.create_default_config()
+            default_config = self.config_loader.create_default_config()
+            env_config = self.config_loader.load_environment_config()
+            if env_config:
+                config_dict = self.config_loader.config_to_dict(default_config)
+                config_dict = self.config_loader.merge_configs(config_dict, env_config)
+                return self.config_loader.parse_game_config(config_dict)
+
+            return default_config
 
         except Exception as e:
             print(f"Error loading configuration: {e}")
@@ -430,7 +443,12 @@ async def main():
         print("🎲 Welcome to Misfits! 🎲")
         print("AI-Driven Life Simulation Game")
         print("="*50)
-        print(f"Simulation Mode: {game.config.simulation.default_mode}")
+        current_mode = (
+            game.simulation_mode_manager.current_mode.name
+            if game.simulation_mode_manager and game.simulation_mode_manager.current_mode
+            else game.config.simulation.default_mode
+        )
+        print(f"Simulation Mode: {current_mode}")
         print(f"Characters: {len(game.characters)}")
         print(f"Tick Interval: {game.config.simulation.tick_interval}s")
         print("="*50)
