@@ -64,6 +64,15 @@ python main.py
 
 **First time?** Check out our [🎯 Getting Started Guide](docs/GETTING_STARTED.md) to create your first neighborhood of digital misfits!
 
+### 🌐 Web GUI (Development Preview)
+
+```bash
+# Start the FastAPI web GUI with demo data
+python scripts/run_web_gui.py
+```
+
+Then open <http://localhost:8000> in your browser to explore the live neighbourhood dashboard.
+
 ---
 
 ## 🎨 Game Modes: Pick Your Flavor of Chaos
