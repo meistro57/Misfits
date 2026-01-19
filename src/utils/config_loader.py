@@ -278,6 +278,10 @@ class ConfigLoader:
             log_level=config_dict.get("log_level", "INFO")
         )
 
+    def parse_game_config(self, config_dict: Dict[str, Any]) -> GameConfig:
+        """Public wrapper to parse configuration dictionaries into GameConfig."""
+        return self._parse_game_config(config_dict)
+
     def save_config_file(self, filename: str, config_data: Dict[str, Any],
                         format: ConfigFormat = ConfigFormat.YAML):
         """Save configuration to file."""
@@ -368,6 +372,10 @@ class ConfigLoader:
             "debug_mode": config.debug_mode,
             "log_level": config.log_level
         }
+
+    def config_to_dict(self, config: GameConfig) -> Dict[str, Any]:
+        """Public wrapper for configuration serialization."""
+        return self._config_to_dict(config)
 
     def load_personality_config(self, filename: str) -> Dict[str, Any]:
         """Load personality configuration file."""
